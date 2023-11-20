@@ -64,7 +64,10 @@ document.querySelector("#skip").addEventListener("click", function() {
 	if (video.currentTime >= video.duration) {
 		video.currentTime = 0;
 	}
+	console.log("Video current time is " + video.currentTime)
 })
+
+
 
 // Mute/unmute the video and update the text in the button
 var mute = document.getElementById("mute")
