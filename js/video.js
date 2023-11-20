@@ -22,7 +22,13 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video")
 })
 
-
+var slider = document.getElementById("slider")
+var currentVolume = document.getElementById("volume")
+document.querySelector("#play").addEventListener("click", function() {
+	const volumeLevel = slider.value;
+	video.volume = volumeLevel / 100;
+	currentVolume.textContent = volumeLevel + "%";
+})
 
 // Pause Button: Pause the video
 document.querySelector("#pause").addEventListener("click", function() {
